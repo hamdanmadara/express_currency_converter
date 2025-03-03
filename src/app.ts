@@ -23,10 +23,10 @@ class App {
     // Security middleware
     this.app.use(helmet());
     
-    // CORS configuration
+    // CORS configuration - Updated to allow all origins
     this.app.use(cors({
-      origin: config.corsOrigin,
-      methods: ['GET', 'POST'],
+      origin: '*',  // Allow all origins to fix CORS issues
+      methods: ['GET', 'POST', 'OPTIONS'],
       allowedHeaders: ['Content-Type', 'Authorization']
     }));
     
