@@ -25,7 +25,7 @@ class App {
     
     // CORS configuration - Updated to allow all origins
     this.app.use(cors({
-      origin: '*',  // Allow all origins to fix CORS issues
+      origin: ['https://angular-currency-converter-nine.vercel.app','http://localhost:4200'],  // Allow all origins to fix CORS issues
       methods: ['GET', 'POST', 'OPTIONS'],
       allowedHeaders: ['Content-Type', 'Authorization']
     }));
